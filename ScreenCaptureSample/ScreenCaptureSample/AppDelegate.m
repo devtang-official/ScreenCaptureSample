@@ -6,16 +6,20 @@
 //
 
 #import "AppDelegate.h"
+#import "SCETestPanelController.h"
 
 @interface AppDelegate ()
 
 @property (strong) IBOutlet NSWindow *window;
+@property (strong) SCETestPanelController *testPanelController;
+
 @end
 
 @implementation AppDelegate
 
 - (void)applicationDidFinishLaunching:(NSNotification *)aNotification {
-    // Insert code here to initialize your application
+    self.testPanelController = [[SCETestPanelController alloc] init];
+    [self.testPanelController showWindow:nil];
 }
 
 
